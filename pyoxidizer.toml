@@ -1,0 +1,13 @@
+[app]
+name = "安卓多语言工具"
+version = "0.1.0"
+description = "用于将xml合并以及将表格转换为语言xml"
+
+[build]
+target = "executable"
+python = { version = "3.6.5" }
+
+[[bundle.binaries]]
+name = "myapp"
+type = "python"
+entry_point = "path.to.your.main.module:main"
