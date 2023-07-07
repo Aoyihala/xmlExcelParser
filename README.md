@@ -1,0 +1,2 @@
+# xmlExcelParser
+用于合并安卓多语言xml以及处理excel表格转换为多语言xml的小工具
