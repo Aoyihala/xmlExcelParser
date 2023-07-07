@@ -1,15 +1,29 @@
-# xlsx使用的变量
+# xlsx使用的变量 模式1
 listConst:list = []
 listFilter:list = []
 listLanguage:list = []
 
-# xml使用的变量
+# xml使用的变量 模式2and模式1
 pathOldXml:str
 pathNewXml:str
 listOldXmlNames = []
 listNewXmlNames = []
 mapOldXml = {}
 mapNewXml = {}
+
+# 模式3使用
+xmlspathDir:str
+xmlKey:str
+xmlValue:str
+# 批量翻译需要拓展
+
+
+# 模式3实体
+class XmlGenrageBean:
+    def __init__(self):
+        self.dirName = ""
+        self.key = ""
+        self.value = ""
 
 
 #语言实体bean

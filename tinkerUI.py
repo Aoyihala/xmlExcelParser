@@ -8,7 +8,8 @@ labelNewXml:Label
 #展示消息用
 windowMessage:tk = None
 labelMessage:Label
-
+entryKey:Entry
+entryValue:Entry
 
 def showMesssageWindow(message):
     global windowMessage
@@ -63,6 +64,29 @@ def addButtonAndDes2(clickOldXml,clickNewXml,clickCallBackmodel):
               width=10,
               height=1).pack()
     tk.Label(window,text="点击上方xml按钮打开文件选择器，选择想xml文件，将里面的内容合并比对后输出一个新的语言文件string.xml").pack()
+ 
+ 
+def addInputAndButton3(clickPathSelect,clickModel3):
+     global entryKey
+     global entryValue
+     tk.Button(window,text="选择文件夹",command=clickPathSelect,
+              bg="#FF0000", 
+              fg="#FFFFFF",
+              width=10,
+              height=1).pack()
+     entryKey = Entry(window)
+     entryValue = Entry(window)
+     entryKey.insert(0,"请输入字符串key")
+     entryValue.insert(0,"请输入字符串的中文值")
+     entryKey.pack()
+     entryValue.pack()
+     tk.Button(window,text="模式3",command=clickModel3(entryKey.get,entryValue.get),
+              bg="#FF0000", 
+              fg="#FFFFFF",
+              width=10,
+              height=1).pack()
+     tk.Label(window,text="输入key和value值，会自动翻译(机翻)并填充到已选择的文件夹里对应的strings.xml").pack()
+ 
  
 def showErrorLabel(message):
     global labelError1

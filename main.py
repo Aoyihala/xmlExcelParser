@@ -7,6 +7,7 @@ import utils
 import constants
 import threading
 from threading import *
+import model3
 
 
 def main():
@@ -16,9 +17,15 @@ def main():
     tinkerUI.init(window)
     tinkerUI.addButtonAndDes(buttonClick)
     tinkerUI.addButtonAndDes2(clickOldXml=clickOldXml,clickNewXml=clickNewXml,clickCallBackmodel=clickMode2)
+    tinkerUI.addInputAndButton3(clickModel3=model3.clickModel3,clickPathSelect=model3.clickPathDir)
     window.mainloop()
  
 
+
+
+
+
+# 待优化
 
 def buttonClick():
     # 打开文件选择对话框
@@ -53,7 +60,14 @@ def clickMode2():
     thread = threading.Thread(target= langurageFactory.initModel2(constants.pathOldXml,constants.pathNewXml,callbackMessage))
     thread.start()
          
-
+def showAndReturnPathSelector():
+    # 创建一个隐藏的根窗口
+    root = tk.Tk()
+    root.withdraw()
+    # 打开文件选择对话框
+    dir_path = filedialog.askdirectory()
+    root.destroy()    
+    return dir_path
 
 
 def showAndReturnFileSelector():
