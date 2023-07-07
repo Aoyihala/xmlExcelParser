@@ -22,10 +22,10 @@ pip install pyinstaller
 
 请在确保执行安装了pyinstaller之后使用
 
-执行命令
+在工程根目录执行命令
 
 ```python
 pyinstaller --windowed main.py
 ```
 
-会在目录里生成压缩包。
+会在目录里生成压缩包。执行其中的main.exe
