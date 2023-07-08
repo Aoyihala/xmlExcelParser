@@ -13,7 +13,7 @@ import model3
 def main():
     window = tk.Tk()
     window.title("多语言转换器")
-    window.geometry("600x300")
+    window.geometry("600x400")
     tinkerUI.init(window)
     tinkerUI.addButtonAndDes(buttonClick)
     tinkerUI.addButtonAndDes2(clickOldXml=clickOldXml,clickNewXml=clickNewXml,clickCallBackmodel=clickMode2)
